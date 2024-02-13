@@ -1,7 +1,8 @@
 # GPT-website
 커피 추천을 위한 AI활용
 
-# WBS
+## WBS
+```mermaid
 gantt
     title 커피 뭐 먹을까?
     dateFormat  YYYY-MM-DD
@@ -17,3 +18,4 @@ gantt
     테스트                      :         tes1, after dev3, 1d
     section 완료
     프로젝트 완료               :         done,   des3, after tes1, 1d
+```
