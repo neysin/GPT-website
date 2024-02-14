@@ -47,7 +47,7 @@ gantt
     </tr>
     <tr>
         <td width="70%">
-            <img src="readme_img/메인화면.jpg">
+            <img src="readme_img/메인 화면.jpg">
         </td>
         <td>
             <ul>
@@ -66,7 +66,7 @@ gantt
     </tr>
     <tr width="70%">
         <td width="70%">
-            <img src="readme_img/내용입력.jpg">
+            <img src="readme_img/내용 입력.jpg">
         </td>
         <td>
             <ul>
