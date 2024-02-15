@@ -1,85 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Recommendations</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gpt.js"></script>
 </head>
 <body>
-
     <header>
-        <h1>Coffee Recommendations</h1>
+        <img src="images/coffee_logo.png" alt="카페 로고" width="54" height="40">
     </header>
-
-    <section>
-        <h2>Our Top Picks</h2>
-        <ul>
-            <li>
-                <strong>Espresso</strong>
-                <p>A strong and concentrated coffee drink.</p>
-            </li>
-            <li>
-                <strong>Cappuccino</strong>
-                <p>Espresso with steamed milk and a layer of frothed milk.</p>
-            </li>
-            <li>
-                <strong>Americano</strong>
-                <p>Espresso diluted with hot water, similar to drip coffee.</p>
-            </li>
-        </ul>
-    </section>
-
+    <main class="container">
+        <section>
+            <ul>
+                <li>
+                    <img src="images/cafe_img.jpg" alt="카페 로고" width="400" height="500">
+        
+        </section>
+     
+        <section>
+            <h1>오늘의 커피는?</h1>
+            <form id="form" method="post">
+                <ul>
+                    <li>
+                        <label for="taste">단맛, 쓴맛, 고소한 풍미 등 어떤 맛을 선호하시나요?</label>
+                        <br>
+                        <input type="text" id="taste" name="taste" placeholder="내용을 입력해주세요.">
+                    </li>
+                    <li>
+                        <label for="amount">큰 양의 커피를 선호하시나요, 아니면 작은 양의 진한 커피를 원하시나요?</label>
+                        <br>
+                        <input type="text" id="amount" name="amount" placeholder="내용을 입력해주세요.">
+                    </li>
+                    <li>
+                        <label for="kind of coffee">아메리카노, 라떼, 모카, 콜드 브루 등 어떤 종류의 커피를 선호하시나요?</label>
+                        <br>
+                        <input type="text" id="kind of coffee" name="kind of coffee" placeholder="내용을 입력해주세요.">
+                    </li>
+                    <li>
+                        <label for="personal preference">특별한 향이나 특징이 있는 커피를 원하시나요?</label>
+                        <br>
+                        <input type="text" id="personal preference" name="personal preference" placeholder="내용을 입력해주세요.">
+                    </li>
+                    <li>
+                        <label for="personal preference">뜨거운 커피가 좋으신가요, 아니면 차가운 음료를 선호하시나요?</label>
+                        <br>
+                        <input type="text" id="temperature" name="temperature" placeholder="내용을 입력해주세요.">
+                    </li>  
+                        <button type="submit" id="submit">커피 추천!</button>
+                </ul>
+            </form>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Coffee Recommendations</p>
+        <h2>피곤한 당신에게 추천할 커피는?!</h2>
+        <p class="answer"></p>
     </footer>
-
 </body>
 </html>
