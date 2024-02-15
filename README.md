@@ -20,6 +20,34 @@
 ### 배포 URL
 - https://neysin.github.io/GPT-website/
 
+## 흐름도
+```mermaid
+graph TD;
+    A[웹 페이지 접속] --> B[메인 페이지 표시]
+    B --> C[커피 이미지 표시]
+    B --> D[커피 추천 폼 표시]
+    D --> E{폼 입력}
+    E -- 입력 완료 --> F[폼 데이터 서버로 전송]
+    E -- 입력 취소 --> D
+    F --> G[서버에서 OpenAI API에 요청]
+    G --> H[API 응답 수신]
+    H --> I[추천된 커피 표시]
+    I --> B
+```
+
+## 폴더 구조
+```
+GPT-Website
+├── images
+│   └── cafe_img.jpg
+│   └── coffee_logo.png
+├── js
+│   └── gpt.js
+├── styles
+│   └── style.css
+└── index.html
+```
+
 ## WBS
 ```mermaid
 gantt
@@ -91,3 +119,14 @@ gantt
         </td>
     </tr>
 </table>
+
+## 에러
+* HTML
+ - main을 전체 컨테이너로 잡아 이미지와 질문리스트를 섹션 두개로 잡아 flex를 통해 정렬을 시켜 볼려했지만 제대로 하지 못함.
+ - 이에 대한 이해부족으로 인해 위 두개 섹션의 아래 공백에 결과창을 출력해야 하지만 제대로 정렬이 되지 않아 footer로 아래에 배치
+* CSS
+ - 적재적소에 필요한 요소를 적용시키지 못해 처음 생각한 디자인을 구현하지 못함.
+ - 요소들 마다의 간격을 제대로 설정하지 못함.
+* JavaScript
+ - 질문마다 받은 input값을 사용하여 결과를 도출하려 했지만 잘 되지 않음.
+ - input값을 일일이 받는 것이 나은지 form을 통해 한 번에 보내어 처리하는 것이 나은지가 고민.
